@@ -8,7 +8,7 @@ export const siteConfig = {
   email:      'axiomholdings247@gmail.com',
   whatsapp:   '2349130329266',
   mapLink:    'https://maps.google.com/?q=Jimeta,Yola+North,Adamawa+State,Nigeria',
-  siteUrl:    'https://yourusername.github.io/axiom-website/',
+  siteUrl:    'https://emma1222xx.github.io/axiom-website/',
   repoName:   'axiom-website',
 
   nav: [
