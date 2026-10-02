@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-navy-950 text-white antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-navy-600 to-navy-700 hover:from-navy-500 hover:to-navy-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95;
+  }
+
+  .bg-hero-gradient {
+    background: linear-gradient(135deg, #000815 0%, #002054 50%, #002869 100%);
+  }
+
+  .shadow-glow-sm {
+    box-shadow: 0 0 20px rgba(0, 40, 105, 0.3);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 40px rgba(0, 40, 105, 0.4);
+  }
+
+  .ring-brand-glow {
+    --tw-ring-color: rgba(0, 40, 105, 0.5);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
