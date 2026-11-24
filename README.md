@@ -1,60 +1,30 @@
-# AXIOM DYNAMICS VENTURES - Official Website
+# AXIOM Dynamics Ventures — corporate website
 
-This is the official production-ready source code for the Axiom Dynamics Ventures website. It is built with React, TypeScript, Tailwind CSS, and Framer Motion, optimized for high performance on mobile devices.
+A standalone, responsive, self-hostable HTML/CSS/JavaScript project. No npm, build process, API key, CDN or external runtime dependency is necessary. All included images are local WebP assets derived from the supplied portfolio; no internal company dossier is included.
 
-## 🚀 Quick Start (Running Locally)
+## Preview
+Extract the ZIP. Open `index.html` in Chrome or Edge, or serve the folder locally with `python -m http.server 8000` and visit http://localhost:8000.
 
-Make sure you have Node.js (v22+) installed on your computer.
+## Deploy
+- GitHub Pages: upload all contents of the extracted project folder (including assets) to the root of your repository. Add the included `.nojekyll` file. In Settings → Pages, select Deploy from a branch, then main and /(root). Existing site: back up the old repo first.
+- cPanel: upload the contents to public_html (or the document root for your chosen domain). Ensure index.html is at that root.
+- Netlify: drag the extracted folder containing index.html into its manual deploy interface.
+- Custom domain: use your host's actual DNS instructions. Domain ownership and DNS configuration were not confirmed.
 
-1. **Open your terminal** and navigate to this folder:
-   ```bash
-   cd axiom-website
-   ```
+## Before publication
+1. Confirm the WhatsApp number +234 913 032 9266 (from the supplied AXIOM flyer) and the email axiomholdings247@gmail.com (from the dossier) are current. Edit app.js and the contact links in index.html if needed.
+2. Confirm current offerings, location and permission to publish client artwork. The exact shop address, payment policy, pricing and machine ownership/capacity were not verified. The site avoids making claims about them. The ID card and a banner displaying account details were intentionally omitted. Review any other client contact details visible within artwork before public release.
+3. Test the WhatsApp review form on your phone; this opens a prefilled conversation but does not send automatically. Customers attach artwork in WhatsApp. There is no server-side order tracking, file upload, admin portal or live payment integration. The website does not store submitted data.
+4. The original logo is used in the header, about section and footer. The WebGL centrepiece is an original decorative A-inspired sculpture rather than a replacement logo. CSS-based perspective, scroll reveals, metallic surfaces and floating elements supply the other dimensional effects. A static fallback and reduced-motion handling are included.
+5. Update `gallery.js` and the assets directory to add new portfolio work. Each entry includes a title, category and type. Distinguish actual production photos from artwork and mockups.
 
-2. **Install all dependencies:**
-   ```bash
-   npm install
-   ```
+## File structure
+- index.html — complete page content and semantic layout
+- style.css — responsive visual system, motion and CSS 3D
+- app.js — gallery, navigation, quotation review and WhatsApp handoff
+- scene.js — dependency-free WebGL sculpture
+- gallery.js — portfolio catalogue
+- assets/ — optimized logo and project photos
+- .nojekyll — GitHub Pages static hosting marker
 
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-   Open the URL shown in your terminal (usually `http://localhost:5173`) in your browser.
-
-## 🛠️ How to Customize Data
-
-All the business details, text, colors, and services are centralized.
-1. Open `src/siteConfig.ts`
-2. Look for `whatsapp: '234XXXXXXXXXX'` and replace it with the real business WhatsApp number.
-3. Update the `whatsappLink` properly.
-4. You can edit Services, FAQ, Pricing, and Why Axiom facts all within that single file.
-
-## 🖼️ How to Add Real Images
-
-1. **Main Logo:** Replace `public/logo.png` with your actual logo file. (Keep the name `logo.png`).
-2. **Portfolio Images:** Place your project images inside `public/portfolio/`. Then open `src/components/Portfolio.tsx` and update the `mockPortfolioItems` list with the correct image paths (e.g., `/portfolio/my-design.png`).
-
-## 🌐 How to Deploy to GitHub Pages
-
-This project is fully configured to deploy automatically to GitHub Pages using GitHub Actions!
-
-1. Create a new empty repository on GitHub called exactly **`axiom-website`**.
-2. Initialize Git locally and push this code:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_GITHUB_USERNAME/axiom-website.git
-   git push -u origin main
-   ```
-3. Go to your GitHub repository in the browser.
-4. Go to **Settings** > **Pages**.
-5. Under Build and deployment, change the Source to **GitHub Actions**.
-6. The automated workflow file `.github/workflows/deploy.yml` will automatically build and publish your site!
-7. **Important:** If your repository name is NOT `axiom-website`, you must update the `base: '/axiom-website/'` setting in `vite.config.ts` to match your repo name!
-
-## 🐞 Common Build Errors
-- **TypeScript Errors:** If `npm run build` fails, ensure you haven't removed required variables or used incorrect types in `siteConfig.ts`.
-- **Images not loading on GitHub Pages:** Make sure image paths start with a `/` (e.g., `/logo.png`) or use relative paths correctly, as Vite depends on the `base` path configured in `vite.config.ts`.
+No private financial, funding or personal founder details from the internal dossier are published.
